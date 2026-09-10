@@ -15,7 +15,7 @@ if not exist "%VBC_PATH%" (
 )
 
 echo [2/2] 正在编译 MainForm.vb -> XiaomiRouterSshCalc.exe...
-"%VBC_PATH%" /target:winexe /out:"XiaomiRouterSshCalc.exe" /reference:"System.dll","System.Windows.Forms.dll","System.Drawing.dll" "MainForm.vb"
+"%VBC_PATH%" /target:winexe /out:"XiaomiRouterSshCalc.exe" /win32icon:"Resources\app.ico" /win32manifest:"app.manifest" /reference:"System.dll","System.Windows.Forms.dll","System.Drawing.dll","System.Core.dll" "MainForm.vb"
 
 if %errorlevel% equ 0 (
     echo.
